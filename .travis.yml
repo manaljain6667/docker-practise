@@ -3,7 +3,7 @@ services:
   - docker # installs the copy of docker
 
 before_install: #series of commands which will get executed before we run any deployment/test
-  - docker build -f -t manal/docer-practise dockerfile.dev
+  - docker build -t manal/docer-practise -f dockerfile.dev
 
 script:
   - docker run -e CI=true manal/docer-practise npm run test
